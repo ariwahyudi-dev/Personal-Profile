@@ -1,0 +1,59 @@
+/* =========================================================
+   RESPONSIVE — ARI WAHYUDI PERSONAL PROFILE
+   Breakpoints: 1920 / 1440 / 1366 / 768 / 480 / 375
+   ========================================================= */
+
+@media (max-width: 1366px) {
+  .container { padding: 0 32px; }
+  .hero__title { font-size: 2.9rem; }
+}
+
+@media (max-width: 1024px) {
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__terminal { order: -1; max-width: 460px; margin: 0 auto 32px; }
+
+  .about__grid { grid-template-columns: 1fr; gap: 40px; }
+  .skills__columns { grid-template-columns: 1fr; gap: 32px; }
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+  .why-me__grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .navbar__nav, .navbar__cta { display: none; }
+  .navbar__toggle { display: flex; }
+
+  .navbar__nav {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+    padding: 12px 24px 24px;
+  }
+  .navbar__nav.is-open { display: block; }
+  .navbar__menu { flex-direction: column; gap: 4px; }
+  .navbar__menu a { display: block; padding: 12px 4px; border-bottom: 1px solid var(--color-border); }
+
+  .hero { padding: 130px 0 64px; }
+  .hero__title { font-size: 2.3rem; }
+  .hero__desc { max-width: none; }
+
+  .projects__grid { grid-template-columns: 1fr; }
+  .process__list li { grid-template-columns: 36px 1fr; gap: 16px; }
+
+  section { scroll-margin-top: 76px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 20px; }
+  .section-title { font-size: 1.55rem; }
+  .hero__title { font-size: 1.95rem; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+  .terminal__body { padding: 16px; font-size: 0.8rem; }
+}
+
+@media (max-width: 375px) {
+  .hero__title { font-size: 1.75rem; }
+  .btn { padding: 12px 20px; font-size: 0.9rem; }
+}
